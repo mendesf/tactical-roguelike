@@ -4,11 +4,9 @@ use bevy::{
     window::{close_on_esc, PresentMode, WindowTheme},
 };
 
-const SCALE_FACTOR: f64 = 8.;
+const WIDTH: f32 = 800.;
 
-const WIDTH: f32 = 1600.;
-
-const HEIGHT: f32 = 900.;
+const HEIGHT: f32 = 600.;
 
 pub struct DisplayPlugin;
 
@@ -32,8 +30,7 @@ pub fn window_plugin() -> WindowPlugin {
     WindowPlugin {
         primary_window: Some(Window {
             title: "Tactical Roguelike".into(),
-            resolution: WindowResolution::new(WIDTH, HEIGHT)
-                .with_scale_factor_override(SCALE_FACTOR),
+            resolution: WindowResolution::new(WIDTH, HEIGHT),
             present_mode: PresentMode::AutoVsync,
             // Tells wasm to resize the window according to the available canvas
             fit_canvas_to_parent: true,

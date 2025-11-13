@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 bevy = "~0.12"
 bracket-lib = "~0.8"
+bevy-inspector-egui = "~0.21"
 
 # Enable high optimizations for dependencies (incl. Bevy), but not for our code:
 [profile.dev.package."*"]
